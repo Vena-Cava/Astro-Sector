@@ -1,6 +1,8 @@
 /* CSS Document */
 
 #theme-switch{position:absolute; right:10px; top:25px;}
+#logoDiv{position:relative; left:10px; top:10px;}
+
 body{
 	background: #00000F;
 }

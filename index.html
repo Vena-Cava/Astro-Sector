@@ -1,28 +1,56 @@
 <!doctype html>
 <html>
 <head>
+	<link href="Styles/light.css" rel="stylesheet" type="text/css">
 	<meta charset="utf-8">
 	<title>Astro Sector | Home</title>
-	<style>
-		body{
-			background: #F1F1F1
-		}
-	</style>
 </head>
 
 <body>
-	<div id="Main">
-		<div id="Header">
-			
-			
-			
-			
+	<div id="Header" class="navigation">
+		<div id="theme-switch">
+			<!-- Theme switch -->
+			<label class="switch">
+  				<input type="checkbox" onclick="themeSwitch()">
+	  			<span class="slider round"></span>
+			</label>
 		</div>
+		
+		
+		
+	</div>
+	<div id="Main">
 		
 		
 		
 		
 		
 	</div>
+	
+	<script>
+		function themeSwitch() {
+			// Obtains an array of all <link>
+            // elements.
+            // Select your element using indexing.
+            var theme = document.getElementsByTagName('link')[0];
+  
+            // Change the value of href attribute 
+            // to change the css sheet.
+            if (theme.getAttribute('href') == 'Styles/light.css') {
+                theme.setAttribute('href', 'Styles/dark.css');
+            } else {
+                theme.setAttribute('href', 'Styles/light.css');
+            }
+			
+			var Image_Id = document.getElementById('AS-Logo');
+			if (Image_Id.src.match("images/AS-Logo.png")) {
+				Image_Id.src = "images/AS-Logo.png";
+			}
+			else {
+				Image_Id.src = "images/AS-Logo.png";
+			}
+		}
+	</script>
+	
 </body>
 </html>
